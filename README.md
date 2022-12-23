@@ -3,6 +3,16 @@
 # Overview:
 Card Matching Game requires the user to pic a number of card with images on them. The goal is to select the correct pairs and compete with yourself or a friend for time!
 # User Instructions
+  User Will be able to:
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  -
+  
 # Game Images (examples not actual)
 ![image](https://user-images.githubusercontent.com/106713788/209357985-c8c90eaa-b9b7-469d-b7a6-d862549f65f3.png)
 ![image](https://user-images.githubusercontent.com/106713788/209358241-e082dcf6-84a2-4676-b2d1-ac3d0ea36c09.png)
