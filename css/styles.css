@@ -1,0 +1,36 @@
+* {
+    background-color: rgb(237, 219, 168);
+}
+
+.container {
+    color: rgb(30, 30, 200);
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.gameBoard img {
+    width: 150px;
+    height: 150px;
+}
+
+#reset {
+    margin: 10% 40%;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-content: center;
+    background-color: white;
+    border: 3px dotted orange;
+}
+
+#reset:hover {
+    background-color: rgb(30, 30, 200);
+    transform: scale(1.05);
+}
