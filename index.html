@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
     <title>NBA Atlantic Memory</title>
 </head>
 
@@ -13,10 +16,12 @@
     <div class="container">
         <h2>NBA Atlantic Division Mix & Match</h2>
         <h4>Select all matching images of NBA teams below before time runs out!</h4>
-        <p>Attempts: <span class="attempts"></span>
-            Finds: <span class="finds"></span>
-            Timer: <span class="Timer"></span>
-        </p>
+        <div class="userInterface">
+            <span class="attempts">Attempts:</span>
+            <img src="/home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-logo-transparent.png">
+            <span class="finds">Finds:</span>
+            <span class="Timer">Timer:</span>
+        </div>
         <div class="gameBoard">
         </div>
         <button id="reset">Reset Board</button>
