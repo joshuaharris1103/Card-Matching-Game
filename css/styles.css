@@ -15,21 +15,22 @@
 .gameBoard {
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
-    width: 100%;
+    height: 100%;
+    width: 90%;
+    /* border: 1px solid black; */
 }
 
 .gameBoard img {
-    border: 1px solid black;
     margin: 0;
     padding: 0;
     width: 150px;
     height: 150px;
     cursor: pointer;
-
+    border: 1px solid black;
 }
+
 .gameBoard img:hover{
-    transform: scale(.95);
+    transform: scale(.975);
 }
 
 .gameBoard img:active{

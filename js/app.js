@@ -1,8 +1,8 @@
 // console.log('hello world')
 document.addEventListener('DOMContentLoaded', () => {
-// Photos and their randomization
-    const cardList = [
-        {
+
+    // Photos and their randomization
+    const cardList = [{
             name: 'NBA',
             image: 'home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-logo-transparent.png'
         },
@@ -62,23 +62,32 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             name: 'Raptors',
             image: 'home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-toronto-raptors-logo-2020.png'
+        },
+        {
+            name: 'Game Ball',
+            image: 'home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-spalding-basketball.png'
+        },
+        {
+            name: 'Game Ball',
+            image: 'home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-spalding-basketball.png'
         }
     ]
-    cardList.sort ( () => 0.5 - Math.random() )
-//////////////////////////////////
-   
+    cardList.sort(() => 0.5 - Math.random())
+    // console.log(cardList)
+
     const board = document.querySelector('.gameBoard')
     const attemptsHolder = document.querySelector('.attempts')
     const foundHolder = document.querySelector('.finds')
-    const timeHolder = document.querySelector('.timer')
+    // const timeHolder = document.querySelector('.timer')
     // const resetButton = document.querySelector('#reset')
-    const gameCards = 7
+    const gameCards = 8
 
     let attempts = 0
     let foundCards = 0
+    // let timer = setInterval(function() {})
     attemptsHolder.textContent = attempts
     foundHolder.textContent = foundCards
-
+    // timeHolder.textContent = timer
 
 
     let selectedCards = []
@@ -93,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             board.appendChild(card)
         }
     }
-   
+
 
     flipCard = () => {
         if (selectedCards.length != 2) {
@@ -108,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    
+
     checkMatches = () => {
         attempts++
         let cards = document.querySelectorAll('img')
@@ -130,11 +139,11 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('completed')
         }
     }
-    
-    resetBoard = () => {
 
-    }
-    
+    // resetBoard = () => {
+
+    // }
+
     initiateBoard()
-    resetButton.addEventListener('click', resetBoard)
+    // resetButton.addEventListener('click', resetBoard)
 })
