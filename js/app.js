@@ -1,8 +1,7 @@
 // console.log('hello world')
 document.addEventListener('DOMContentLoaded', () => {
-
+// Photos and their randomization
     const cardList = [
-
         {
             name: 'NBA',
             image: 'home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-logo-transparent.png'
@@ -65,9 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
             image: 'home/jrh/sei/projects/matching-pairs/Card-Matching-Game/NBA LOGOS FOLDER/nba-toronto-raptors-logo-2020.png'
         }
     ]
+    cardList.sort ( () => 0.5 - Math.random() )
+//////////////////////////////////
+   
     const board = document.querySelector('.gameBoard')
     const attemptsHolder = document.querySelector('.attempts')
-    const foundHolder = document.querySelector('.found')
+    const foundHolder = document.querySelector('.finds')
+    const timeHolder = document.querySelector('.timer')
+    // const resetButton = document.querySelector('#reset')
     const gameCards = 7
 
     let attempts = 0
@@ -75,57 +79,62 @@ document.addEventListener('DOMContentLoaded', () => {
     attemptsHolder.textContent = attempts
     foundHolder.textContent = foundCards
 
-    
-    
+
+
     let selectedCards = []
     let selectedCardsIds = []
 
     initiateBoard = () => {
         for (let i = 0; i < cardList.length; i++) {
             let card = document.createElement('img')
-            card.setAttribute('src', 'basket.png')
+            card.setAttribute('src', 'NBA LOGOS FOLDER/basket.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
             board.appendChild(card)
         }
     }
-    flipCard = () => {
-        if(chosencards.length != 2){
+   
 
-        
-        let cardId = this.getAttribute('data-id')
-        if(this.getAttribute('src') != 'images/blank.png'){
-            chosenCards.push(cardsList[cardId].name)
-            chosenCardsIds.push(cardId)
-            this.SetAttribute('src', cardsList[cardId].image)
-            if(chosenCards.length == 2){
-                setTimeout(checkMatches, 400)
+    flipCard = () => {
+        if (selectedCards.length != 2) {
+            let cardId = this.getAttribute('data-id')
+            if (this.getAttribute('src') != 'NBA LOGOS FOLDER/blank.png') {
+                selectedCards.push(cardList[cardId].name)
+                selectedCardsIds.push(cardId)
+                this.SetAttribute('src', cardList[cardId].image)
+                if (selectedCards.length == 2) {
+                    setTimeout(checkMatches, 400)
+                }
             }
         }
     }
-}
+    
     checkMatches = () => {
         attempts++
         let cards = document.querySelectorAll('img')
-        let firstCard = chosenCardsIds[0]
-        let secondCard = chosenCardsIds[1]
-        if (chosencards[0] == chosencards[1]){
+        let firstCard = selectedCardsIds[0]
+        let secondCard = selectedCardsIds[1]
+        if (selectedCards[0] == selectedCards[1]) {
             foundCards++
-            cards[firstCard].setAttribute('src','images/blank.png')
-            cards[secondCard].setAttribute('src','images/blank.png')
-        
-        } {else
-            cards[firstCard].setAttribute('src','images/basket.png')
-            cards[secondCard].setAttribute('src','images/basket.png')
+            cards[firstCard].setAttribute('src', 'NBA LOGOS FOLDER/blank.png')
+            cards[secondCard].setAttribute('src', 'NBA LOGOS FOLDER/blank.png')
+        } else {
+            cards[firstCard].setAttribute('src', 'NBA LOGOS FOLDER/basket.png')
+            cards[secondCard].setAttribute('src', 'NBA LOGOS FOLDER/basket.png')
         }
-        chosenCards = []
-        chosenCardsIds = []
-        attemptsHolder.textContent = attempts
-        foundHolder.textContent = foundCards
-        if(foundCards == cardsInGame){
-            alert('Well Done!')
+        selectedCards = []
+        selectedCardsIds = []
+        attemptsHolder.textContent = (`Attempts: ${attempts}`)
+        foundHolder.textContent = (`Finds: ${foundCards}`)
+        if (foundCards == gameCards) {
+            alert('completed')
         }
     }
-    initiateBoard()
+    
+    resetBoard = () => {
 
+    }
+    
+    initiateBoard()
+    resetButton.addEventListener('click', resetBoard)
 })
