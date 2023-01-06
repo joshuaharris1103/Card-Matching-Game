@@ -37,16 +37,16 @@
     transform: rotateY(180deg)
 } */
 
-#start {
-    margin: 10% 40%;
-    font-size: 2rem;
+#reset {
+    margin: 5% 35%;
+    font-size: 1.5rem;
     cursor: pointer;
     justify-content: center;
     background-color: white;
     border: 3px dotted orange;
 }
 
-#start:hover {
+#reset:hover {
     background-color: rgb(30,30,200);
     color: orange;
     transform: scale(1.05);

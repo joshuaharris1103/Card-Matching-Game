@@ -1,4 +1,3 @@
-// console.log('hello world')
 document.addEventListener('DOMContentLoaded', () => {
 
     // Photos and their randomization
@@ -73,19 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ]
     cardList.sort(() => 0.5 - Math.random())
-    // console.log(cardList)
 
     const board = document.querySelector('.gameBoard')
     const attemptsHolder = document.querySelector('.attempts')
     const foundHolder = document.querySelector('.finds')
-    // const timeHolder = document.querySelector('.timer')
-    const gameButton = document.getElementById('#start')
-    // const resetButton = document.querySelector('#reset')
+    const timeHolder = document.querySelector('.timer')
+    const reset = document.getElementById('#reset')
     const gameCards = 8
 
     let attempts = 0
     let foundCards = 0
-    // let timer = setInterval(function() {})
+    let timeSecond = 00
+    let timeMinute = 00
     attemptsHolder.textContent = attempts
     foundHolder.textContent = foundCards
     // timeHolder.textContent = timer
@@ -97,12 +95,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // startGame = () => {
     //     for (let i=0; i < cardList.length; i++)
         
-    //     gameButton.addEventListener('click', initiateBoard)
-    //     // let time = setInterval(() => {
-            
-    //     // }, 1000)
-    //     // gametimer doesnt start until play is hit
-    //     // play button
+    //     gameButton.addEventListener('click', () => {console.log("start")})
+        let timer = setInterval(() => {
+           timeSecond++ 
+        }, 1000)
+        timeHolder.innerHTML = `${timeSecond}`
+        timeHolder.textContent = `${timeSecond}`
+        
+
+        
+        
+        // gametimer doesnt start until play is hit
+        // play button
     
     // initiateBoard()
     // }
@@ -113,8 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.setAttribute('src', 'NBA_LOGOS_FOLDER/basket.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
-            board.appendChild(card)
-            
+            board.appendChild(card)            
         }
     }
     
@@ -152,22 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
         selectedCardsIds = []
         attemptsHolder.textContent = (`${attempts}`)
         foundHolder.textContent = (`${foundCards}`)
-        // timeHolder.textContent = 
         if (foundCards == gameCards) {
             alert('completed')
         }
+        
     }
-
+    // const resetGame = () => {
+    //         attempts = 0
+    //         foundCards = 0
+    //         timeSecond = 00
+    //         timeMinute = 00
+    //         console.log("reset")
+    //     }
     
-
-    gameOver = () => {
-
-    }
-
-    // resetBoard = () => {
-
-    // }
+    // reset.addEventListener('click', resetGame)
 
 initiateBoard()
-    // resetButton.addEventListener('click', resetBoard)
 })
