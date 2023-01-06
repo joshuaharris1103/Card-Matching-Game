@@ -33,11 +33,11 @@
     transform: scale(.975);
 }
 
-.gameBoard img:active{
+/* .gameBoard img:active{
     transform: rotateY(180deg)
-}
+} */
 
-#reset {
+#start {
     margin: 10% 40%;
     font-size: 2rem;
     cursor: pointer;
@@ -46,7 +46,7 @@
     border: 3px dotted orange;
 }
 
-#reset:hover {
+#start:hover {
     background-color: rgb(30,30,200);
     color: orange;
     transform: scale(1.05);
