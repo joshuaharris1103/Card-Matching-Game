@@ -17,7 +17,7 @@
     flex-wrap: wrap;
     height: 100%;
     width: 90%;
-    /* border: 1px solid black; */
+    perspective: 1000px;
 }
 
 .gameBoard img {
@@ -27,6 +27,8 @@
     height: 150px;
     cursor: pointer;
     border: 1px solid black;
+    transform-style:preserve-3d;
+    transition: transfomr .5s;
 }
 
 .gameBoard img:hover{
@@ -38,7 +40,7 @@
 } */
 
 #reset {
-    margin: 5% 35%;
+    margin: auto 35%;
     font-size: 1.5rem;
     cursor: pointer;
     justify-content: center;
@@ -51,3 +53,8 @@
     color: orange;
     transform: scale(1.05);
 }
+@media screen and (min-width: 750px) and (max-width: 800px) {
+    .container {
+      width: 100%;
+    }
+  }

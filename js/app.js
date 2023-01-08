@@ -76,14 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const board = document.querySelector('.gameBoard')
     const attemptsHolder = document.querySelector('.attempts')
     const foundHolder = document.querySelector('.finds')
-    const timeHolder = document.querySelector('.timer')
-    const reset = document.getElementById('#reset')
+    // const timeHolder = document.querySelector('.timer')
+    // const reset = document.getElementById('#reset')
     const gameCards = 8
 
     let attempts = 0
     let foundCards = 0
-    let timeSecond = 00
-    let timeMinute = 00
+    // let timeSecond = 00
+    // let timeMinute = 00
     attemptsHolder.textContent = attempts
     foundHolder.textContent = foundCards
     // timeHolder.textContent = timer
@@ -96,22 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
     //     for (let i=0; i < cardList.length; i++)
         
     //     gameButton.addEventListener('click', () => {console.log("start")})
-        let timer = setInterval(() => {
-           timeSecond++ 
-        }, 1000)
-        timeHolder.innerHTML = `${timeSecond}`
-        timeHolder.textContent = `${timeSecond}`
+        // let timer = setInterval(() => {
+        //    timeSecond++ 
+        // }, 1000)
+        // timeHolder.innerHTML = `${timeSecond}`
+        // timeHolder.textContent = `${timeSecond}`
         
-
         
         
         // gametimer doesnt start until play is hit
         // play button
-    
-    // initiateBoard()
-    // }
-    
-    initiateBoard = () => {
+        
+        // initiateBoard()
+        // }
+        
+        initiateBoard = () => {
         for (let i = 0; i < cardList.length; i++) {
             let card = document.createElement('img')
             card.setAttribute('src', 'NBA_LOGOS_FOLDER/basket.png')
@@ -156,19 +155,31 @@ document.addEventListener('DOMContentLoaded', () => {
         attemptsHolder.textContent = (`${attempts}`)
         foundHolder.textContent = (`${foundCards}`)
         if (foundCards == gameCards) {
-            alert('completed')
+            alert('You Win!')
         }
         
     }
-    // const resetGame = () => {
-    //         attempts = 0
-    //         foundCards = 0
-    //         timeSecond = 00
-    //         timeMinute = 00
-    //         console.log("reset")
-    //     }
     
-    // reset.addEventListener('click', resetGame)
-
-initiateBoard()
+    document.getElementById('reset').onClick = 
+        reset.addEventListener('click', () => {
+            console.log("reset")
+            // score is reset below 
+            document.querySelector('.attempts').textContent = 0
+            document.querySelector('.finds').textContent = 0
+            if (foundCards <= gameCards) {
+                for (let i = 1; i < cardList.sort; i--) {
+                    let card = document.createElement('img')
+                    card.removeAttribute('src', 'NBA_LOGOS_FOLDER/blank.png')
+                    card.setAttribute('src', 'NBA_LOGOS_FOLDER/basket.png')
+                    card.setAttribute('data-id', i)
+                    card.addEventListener('click', flipCard)
+                    board.appendChild(card)
+                    cardList.sort(() => 0.5 - Math.random())
+                                
+                }
+            }
+        })
+    
+    initiateBoard()
 })
+        
