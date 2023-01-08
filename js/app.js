@@ -167,9 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.attempts').textContent = 0
             document.querySelector('.finds').textContent = 0
             if (foundCards <= gameCards) {
-                for (let i = 1; i < cardList.sort; i++) {
+                for (let i = 0; i < cardList.length; i++) {
                     let card = document.createElement('img')
-                    card.removeAttribute('src', 'NBA_LOGOS_FOLDER/blank.png')
+                    // card.removeAttribute('src', 'NBA_LOGOS_FOLDER/blank.png')
                     card.setAttribute('src', 'NBA_LOGOS_FOLDER/basket.png')
                     card.setAttribute('data-id', i)
                     card.addEventListener('click', flipCard)
