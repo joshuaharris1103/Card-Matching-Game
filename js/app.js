@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attemptsHolder.textContent = (`${attempts}`)
         foundHolder.textContent = (`${foundCards}`)
         if (foundCards == gameCards) {
-            window.location.href = "index-2.html"
+            window.location.href = "end.html"
         }
 
     }
