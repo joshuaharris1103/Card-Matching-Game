@@ -2,23 +2,21 @@
 
 # Overview:
 Card Matching Game requires the user to pic a number of card with images on them. The goal is to select the correct pairs and compete with yourself or a friend for time!
+
 # User Instructions
   User Will be able to:
   - Click and match faced down pictures to challenge memory
-  - Enjoy colorful images on the cards
-  - Improve performance by racing against time
-  -
-  -
-  -
-  -
-  -
+  - Enjoy colored NBA Logos from the Atlantic Division of the League
+  - Track Attempts and Found Matches while playing
+  - Reset the gameboard at any moment to play again
   
-# Game Images (examples not actual)
-![image](https://user-images.githubusercontent.com/106713788/209357985-c8c90eaa-b9b7-469d-b7a6-d862549f65f3.png)
-![image](https://user-images.githubusercontent.com/106713788/209358241-e082dcf6-84a2-4676-b2d1-ac3d0ea36c09.png)
-![image](https://user-images.githubusercontent.com/106713788/209358308-581ced74-41f1-4ea3-8d6f-5297ae928842.png)
-![image](https://user-images.githubusercontent.com/106713788/209358328-2b9e1676-6244-4c36-be5d-000fb50c0e00.png)
-![image](https://user-images.githubusercontent.com/106713788/209358398-f79ce570-4d68-4bae-9ea8-aab279894a9d.png)
+# Game Images
+![Screenshot_20230109_091540](https://user-images.githubusercontent.com/106713788/211330420-507ec095-6d34-46ea-a6cf-54bab6be3fa5.png)
+![Screenshot (7)](https://user-images.githubusercontent.com/106713788/211330511-3012126e-45ac-465b-be8d-810c3e0dfd78.png)
+![Screenshot (8)](https://user-images.githubusercontent.com/106713788/211330596-87fd022e-c1be-4f64-a8be-682cc9622ed5.png)
+![Screenshot (9)](https://user-images.githubusercontent.com/106713788/211330782-3fe2a5c9-3a8c-4aec-9e76-e28e265815bd.png)
+
+
 # Technologies Used
 - HTML5
 - CSS3
