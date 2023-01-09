@@ -77,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const attemptsHolder = document.querySelector('.attempts')
     const foundHolder = document.querySelector('.finds')
     // const timeHolder = document.querySelector('.timer')
-    // const reset = document.getElementById('#reset')
     const gameCards = 8
 
     let attempts = 0
@@ -92,23 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedCards = []
     let selectedCardsIds = []
     
-    // startGame = () => {
-    //     for (let i=0; i < cardList.length; i++)
-        
-    //     gameButton.addEventListener('click', () => {console.log("start")})
-        // let timer = setInterval(() => {
-        //    timeSecond++ 
-        // }, 1000)
-        // timeHolder.innerHTML = `${timeSecond}`
-        // timeHolder.textContent = `${timeSecond}`
-        
-        
-        
-        // gametimer doesnt start until play is hit
-        // play button
-        
-        // initiateBoard()
-        // }
+  
         
         initiateBoard = () => {
         for (let i = 0; i < cardList.length; i++) {
@@ -162,23 +145,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('reset').onClick = 
         reset.addEventListener('click', () => {
-            console.log("reset")
-            // score is reset below 
+            // score is reset below
+            document.querySelector('.gameBoard').innerHTML = '' 
+            attempts = 0
+            foundCards = 0
             document.querySelector('.attempts').textContent = 0
             document.querySelector('.finds').textContent = 0
-            if (foundCards <= gameCards) {
-                for (let i = 0; i < cardList.length; i++) {
-                    let card = document.createElement('img')
-                    // card.removeAttribute('src', 'NBA_LOGOS_FOLDER/blank.png')
-                    card.setAttribute('src', 'NBA_LOGOS_FOLDER/basket.png')
-                    card.setAttribute('data-id', i)
-                    card.addEventListener('click', flipCard)
-                    board.appendChild(card)
-                    cardList.sort(() => 0.5 - Math.random())
+            initiateBoard()
+            cardList.sort(() => 0.5 - Math.random())
                                 
-                }
-            }
-        })
+            })
     
     initiateBoard()
 })
