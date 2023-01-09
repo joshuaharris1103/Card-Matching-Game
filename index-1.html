@@ -13,15 +13,22 @@
 </head>
 
 <body>
-    <div class="container" id="landing">
+    <div class="container">
         <h2>NBA Atlantic Division Mix & Match</h2>
         <h4>Select all matching images of NBA teams below and train your memory!</h4>
-       <!-- <a> </a><button id="Start">Start Game</button> -->
-       <img id="landingPic" src="NBA_LOGOS_FOLDER/atlantic-landing-page.jpg" width="700px">
-       <a href="index.html"><button id="start">Start Game</button></a>
+        <div class="userInterface">
+            <h5>
+                Attempts:<span class="attempts"></span>
+                Finds:<span class="finds"></span>
+                <!-- Timer:<span class="timer"></span> -->
+            </h5>
+        </div>
+        <div class="gameBoard">
+        </div>
 
+        <button id="reset">Restart Game</button>
     </div>
-    
+    <script src="js/app.js"></script>
 </body>
 
 </html>

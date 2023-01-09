@@ -12,6 +12,24 @@
     width: 700px;
 }
 
+#landing {
+    color: rgb(30, 30, 200);
+    font-size: 120px;
+    text-align: center;
+    padding: 300px 0px 50px 0px;
+}
+
+#landingPic{
+    justify-content: center;
+}
+
+#winner {
+    color: rgb(30, 30, 200);
+    font-size: 120px;
+    text-align: center;
+    padding: 300px 0px 50px 0px;
+}
+
 h2 {
     font-size: 42px;
 }
@@ -51,7 +69,9 @@ h5 {
     transform: rotateY(180deg)
 } */
 
-#reset {
+#reset,
+#start,
+#playAgain {
     margin: auto 35%;
     font-size: 1.5rem;
     cursor: pointer;
@@ -60,7 +80,7 @@ h5 {
     border: 3px dotted orange;
 }
 
-#reset:hover {
+#reset:hover, #start:hover, #playAgain:hover {
     background-color: rgb(30, 30, 200);
     color: orange;
     transform: scale(1.05);

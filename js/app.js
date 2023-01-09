@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         attemptsHolder.textContent = (`${attempts}`)
         foundHolder.textContent = (`${foundCards}`)
         if (foundCards == gameCards) {
-            alert('You Win!')
+            window.location.href = "index-2.html"
         }
 
     }
@@ -158,3 +158,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initiateBoard()
 })
+
+
+///////////////// GOALS FOR VER 2. //////////////////
+// add timer
+// create cool flip animations
+// add swish sfx on match
+// add crowd roaring sfx on win
+// add "start game" and "you win" overlays to game
