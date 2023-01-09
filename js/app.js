@@ -90,19 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let selectedCards = []
     let selectedCardsIds = []
-    
-  
-        
-        initiateBoard = () => {
+
+
+
+    initiateBoard = () => {
         for (let i = 0; i < cardList.length; i++) {
             let card = document.createElement('img')
             card.setAttribute('src', 'NBA_LOGOS_FOLDER/basket.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
-            board.appendChild(card)            
+            board.appendChild(card)
         }
     }
-    
+
 
     flipCard = (e) => {
         if (selectedCards.length !== 2) {
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    
+
 
     checkMatches = () => {
         attempts++
@@ -140,22 +140,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (foundCards == gameCards) {
             alert('You Win!')
         }
-        
+
     }
-    
-    document.getElementById('reset').onClick = 
+
+    document.getElementById('reset').onClick =
         reset.addEventListener('click', () => {
             // score is reset below
-            document.querySelector('.gameBoard').innerHTML = '' 
+            document.querySelector('.gameBoard').innerHTML = ''
             attempts = 0
             foundCards = 0
             document.querySelector('.attempts').textContent = 0
             document.querySelector('.finds').textContent = 0
             initiateBoard()
             cardList.sort(() => 0.5 - Math.random())
-                                
-            })
-    
+
+        })
+
     initiateBoard()
 })
-        
